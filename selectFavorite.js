@@ -28,7 +28,7 @@
 
     function getValues() {
         var currentValues = selectValues;
-        console.log(currentValues);
+        alert(currentValues);
         return currentValues;
     };
 

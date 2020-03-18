@@ -11,13 +11,34 @@ html, body {
 }
 
 body {
+    margin: 100px;
     font: 12/1.3, 'Dotum', sans-serif;
 }
 
+#selectFavorite > select {
+    width: 120px;
+    height: 30px; 
+    padding-left:10px;
+    border: 1px solid #eaeaea;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background:transparent url('images/ico-arrow.png') no-repeat 100px center;
+}
+
+#selectFavorite > select::-ms-expand {
+    display: none;
+}
+
+#selectFavorite > select option {
+    padding: 40px;
+}
+
 .btn-favorite {
+    vertical-align: middle;
     cursor: pointer;
-    width: 30px;
-    height: 27px;
+    width: 15px;
+    height: 14px;
     text-indent: -9999em;
     border: 0;
     outline: none;
