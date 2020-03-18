@@ -7,21 +7,30 @@
     var selectValues;
 
     selectFavorite.addEventListener('change', function(event) {
-        selectValues = event.target.value;
+        selectValues = event.target.options[selectFavorite.selectedIndex].value;
+        btnFavortie[0].classList.remove('choose');
     });
 
-    console.log(btnFavortie);
-
     btnFavortie[0].addEventListener('click', function(event) {
-        var _this = event.target;   
-        console.log(selectValues);
+        var _target = event.target;
 
-        if(_this.classList.contains === 'choose') {
-            _this.classList.remove('choose');
+        if(selectValues !== undefined) {
+            if(_target.classList.toggle('choose') === true) {
+                _target.classList.toggle('choose', true);
+                getValues();
+            } else {
+                _target.classList.toggle('choose', false);
+            };
         } else {
-            _this.classList.add('choose');
+            alert('셀렉트 상자를 선택해주세요');
         };
-    })
+    });
+
+    function getValues() {
+        var currentValues = selectValues;
+        console.log(currentValues);
+        return currentValues;
+    };
 
 
 
